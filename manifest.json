@@ -1,0 +1,17 @@
+{
+  "name" : "金光论坛屏蔽器",
+  "version" : "0.1",
+  "description" : "屏蔽在金光的广告爱好者",
+   "background_page" : "background.html",
+   "options_page": "options.html",
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://www.jgwy.net/*"
+      ],
+      "js" : ["mootools-core-1.3-full-nocompat-yc.js","ban_user.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ]
+}

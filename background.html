@@ -1,0 +1,8 @@
+<script type="text/javascript">
+chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+    if(request.list_data=='deny_users'){       
+        sendResponse({ deny_users:localStorage['deny_users'] });
+    }
+});
+</script>
+
